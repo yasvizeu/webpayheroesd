@@ -1,31 +1,33 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { HomeModule } from './home/home.module';
-import { HeaderComponent } from './shared/header/header.component';
-import { CardsComponent } from './shared/cards/cards.component';
-import { CarouselComponent } from './shared/carousel/carousel.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderModule } from './shared/header/header.module';
+import { CardsModule } from './shared/cards/cards.module';
+import { CarouselModule } from './shared/carousel/carousel.module';
+import { FooterModule } from './shared/footer/footer.module';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './shared/carousel/carousel.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    CardsComponent,
-    CarouselComponent,
-    FooterComponent
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
     HeroesModule,
+    HeaderModule,
+    CardsModule,
+    CarouselModule,
+    FooterModule,
     NgbModule,
 
 ],
