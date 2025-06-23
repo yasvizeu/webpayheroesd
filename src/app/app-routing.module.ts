@@ -5,7 +5,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent, pathMatch:'full'},
-  {path: "", component: HeroesComponent, pathMatch:'full'},
+  {path: "home", component: HomeComponent, pathMatch:'full'},
+  {path: "heroes", component: HeroesComponent, pathMatch:'full'},
 ];
 
 @NgModule({
