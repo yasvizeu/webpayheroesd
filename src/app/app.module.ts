@@ -9,15 +9,17 @@ import { HeaderModule } from './shared/header/header.module';
 import { CardsModule } from './shared/cards/cards.module';
 import { CarouselModule } from './shared/carousel/carousel.module';
 import { FooterModule } from './shared/footer/footer.module';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CarouselComponent } from './shared/carousel/carousel.component';
+import { VillainsModule } from './villains/villains.module';
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,9 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
     CardsModule,
     CarouselModule,
     FooterModule,
-    NgbModule,
+    VillainsModule,
+    NgbModule
+
 
 ],
   providers: [
