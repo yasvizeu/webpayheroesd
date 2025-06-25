@@ -4,11 +4,11 @@
 // @import '~bootstrap/scss/bootstrap';
 
 // Variáveis SCSS para personalização
-$primary-color: #e76800; // Azul padrão do Bootstrap, você pode mudar
+$primary-color: #007bff; // Azul padrão do Bootstrap, você pode mudar
 $secondary-color: #6c757d; // Cinza
 $card-bg: #ffffff;
-$card-header-bg: #e76800;
-$text-color: #524b40; // Cor do texto geral
+$card-header-bg: $primary-color;
+$text-color: #343a40; // Cor do texto geral
 $input-border-color: #ced4da;
 $input-focus-border-color: lighten($primary-color, 15%);
 
