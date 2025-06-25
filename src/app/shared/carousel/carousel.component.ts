@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class CarouselComponent {
   images = [
-    { src: 'https://www.clinicahumanita.com.br/wp-content/uploads/2022/07/vaidade-01-800x267.png', alt: 'First slide' },
-    { src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96tq2WSD-6X2qC0k6pE0GsX70IFQSvT8nNw&s', alt: 'Second slide' }
+    { src: 'https://wallpapers.com/images/hd/4k-superhero-6t7lzmkbcn4om8da.jpg', alt: 'First slide' },
+    { src: 'https://wallpapers.com/images/hd/4k-superhero-imwi0ao9dn9pzzgr.jpg', alt: 'Second slide' }
   ];
 
   showNavigationArrows = true;
