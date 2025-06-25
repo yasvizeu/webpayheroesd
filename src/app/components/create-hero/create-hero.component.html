@@ -1,1 +1,59 @@
-<p>create-hero works!</p>
+<form>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="card shadow-lg border-0 rounded-lg form-card">
+          <div class="card-header bg-primary text-white text-center py-4 rounded-top-lg">
+            <h2 class="mb-0">Entre em Contato</h2>
+            <p class="mb-0">Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+          </div>
+          <div class="card-body p-5">
+            <form>
+              <div class="mb-4">
+                <label for="nome" class="form-label mb-2">Nome Completo</label>
+                <input type="text" class="form-control form-control-lg" id="nome" placeholder="Seu nome" required>
+                <div class="form-text text-muted">Por favor, insira seu nome completo.</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="email" class="form-label mb-2">Endereço de E-mail</label>
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="nome@exemplo.com"
+                  required>
+                <div class="form-text text-muted">Nunca compartilharemos seu e-mail com ninguém.</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="assunto" class="form-label mb-2">Assunto</label>
+                <select class="form-select form-select-lg" id="assunto" required>
+                  <option selected disabled value="">Escolha...</option>
+                  <option value="duvida">Dúvida Geral</option>
+                  <option value="suporte">Suporte Técnico</option>
+                  <option value="sugestao">Sugestão</option>
+                  <option value="outros">Outros</option>
+                </select>
+                <div class="form-text text-muted">Selecione o tópico da sua mensagem.</div>
+              </div>
+
+              <div class="mb-4">
+                <label for="mensagem" class="form-label mb-2">Sua Mensagem</label>
+                <textarea class="form-control form-control-lg" id="mensagem" rows="6"
+                  placeholder="Digite sua mensagem aqui..." required></textarea>
+                <div class="form-text text-muted">Por favor, seja o mais detalhado possível.</div>
+              </div>
+
+              <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="termos" required>
+                <label class="form-check-label" for="termos">Eu concordo com os <a href="#"
+                    class="text-primary text-decoration-none">Termos e Condições</a></label>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg custom-btn">Enviar Mensagem</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

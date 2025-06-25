@@ -1,0 +1,87 @@
+/* Exemplo: form-contato.component.scss */
+
+// Importe o Bootstrap (se você estiver em um arquivo SCSS global como styles.scss, pode não precisar disso aqui)
+// @import '~bootstrap/scss/bootstrap';
+
+// Variáveis SCSS para personalização
+$primary-color: #e76800; // Azul padrão do Bootstrap, você pode mudar
+$secondary-color: #6c757d; // Cinza
+$card-bg: #ffffff;
+$card-header-bg: #e76800;
+$text-color: #524b40; // Cor do texto geral
+$input-border-color: #ced4da;
+$input-focus-border-color: lighten($primary-color, 15%);
+
+.form-card {
+  border-radius: 1rem; // Bordas mais arredondadas para o card
+  overflow: hidden; // Garante que o rounded-top-lg no header funcione bem
+  background-color: $card-bg;
+  color: $text-color;
+
+  .card-header {
+    background-color: $card-header-bg;
+    border-bottom: none; // Remove a borda padrão do header
+    padding: 2.5rem; // Padding maior para o header
+    .h2, p {
+      color: white; // Garante que o texto do header seja branco
+    }
+  }
+
+  .form-label {
+    font-weight: bold;
+    color: $primary-color; // Cor primária para os labels
+    font-size: 1.1rem;
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: 0.5rem; // Bordas arredondadas para campos de input
+    padding: 0.8rem 1.2rem; // Mais padding
+    font-size: 1.05rem;
+    border: 1px solid $input-border-color;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:focus {
+      border-color: $input-focus-border-color;
+      box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25); // Sombra ao focar
+    }
+  }
+
+  textarea.form-control {
+    resize: vertical; // Permite redimensionar apenas verticalmente
+  }
+
+  .form-text {
+    font-size: 0.85rem;
+    color: $secondary-color; // Cor mais suave para o texto de ajuda
+  }
+
+  .form-check-input {
+    // Estilo personalizado para o checkbox se desejar
+    &:checked {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  .custom-btn {
+    padding: 0.9rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0.75rem; // Bordas mais arredondadas para o botão
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // Escurece no hover
+      transform: translateY(-2px); // Pequeno efeito de elevação
+    }
+    &:active {
+      transform: translateY(0); // Volta à posição original ao clicar
+    }
+  }
+}
+
+// Estilos para o container principal para centralizar o formulário
+.container {
+  max-width: 960px; // Limita a largura máxima do container para um visual limpo em telas grandes
+}
