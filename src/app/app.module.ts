@@ -11,6 +11,7 @@ import { CarouselModule } from './shared/carousel/carousel.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VillainsModule } from './villains/villains.module';
+import { CreateHeroModule } from './create-hero/create-hero.module';
 
 
 
@@ -31,7 +32,8 @@ import { VillainsModule } from './villains/villains.module';
     CarouselModule,
     FooterModule,
     VillainsModule,
-    NgbModule
+    NgbModule,
+    CreateHeroModule
 
 
 ],
