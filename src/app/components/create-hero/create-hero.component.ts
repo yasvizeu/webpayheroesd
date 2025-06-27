@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Hero } from '../../../hero/hero';
 @Component({
   selector: 'app-create-hero',
   standalone: false,
@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './create-hero.component.scss'
 })
 export class CreateHeroComponent {
-  name: string = '';
-  age: number = 0;
-  power: string = '';
-  gender : string = '';
+  hero: Hero = {
+    name:'',
+    age: 0,
+    power: '',
+    gender:''
+  };
+
+  submitHero(){
+    console.log(this.hero);
+  }
 }

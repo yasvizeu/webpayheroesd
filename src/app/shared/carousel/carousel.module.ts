@@ -12,7 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // <-- Importe NgbModule
   ],
   imports: [
     CommonModule,
-    NgbModule,
+    NgbModule
   ],
   exports: [CarouselComponent]
 })

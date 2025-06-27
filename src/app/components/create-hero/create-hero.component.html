@@ -11,35 +11,35 @@
             <form>
               <div class="mb-4">
                 <label for="nome" class="form-label mb-2">Nome</label>
-                <input type="text" [(ngModel)]='name' class="form-control form-control-lg" id="nome" placeholder="Clark Kent" required>
+                <input type="text" [(ngModel)]="hero.name" name="name" class="form-control form-control-lg" id="nome" placeholder="Clark Kent" required>
                 <div class="form-text text-muted"></div>
               </div>
 
               <div class="mb-4">
                 <label for="power" class="form-label mb-2">Poder</label>
-                <input type="text" [(ngModel)]='power' class="form-control form-control-lg" id="power" placeholder="Voar" required>
+                <input type="text" [(ngModel)]='hero.power' name="power" class="form-control form-control-lg" id="power" placeholder="Voar" required>
                 <div class="form-text text-muted"></div>
               </div>
 
               <div class="mb-4">
                 <label for="gender" class="form-label mb-2">Gênero</label>
-                <input type="text" [(ngModel)]='gender' class="form-control form-control-lg" id="gender" placeholder="Sei lá" required>
+                <input type="text" [(ngModel)]='hero.gender' name= "gender"class="form-control form-control-lg" id="gender" placeholder="Sei lá" required>
                 <div class="form-text text-muted"></div>
               </div>
 
               <div class="mb-4">
                 <label for="age" class="form-label mb-2">Idade</label>
-                <input type="number" [(ngModel)]='age' class="form-control form-control-lg" id="age" placeholder="Voar" required>
+                <input type="number" [(ngModel)]='hero.age' name="age" class="form-control form-control-lg" id="age" placeholder="25" required>
                 <div class="form-text text-muted"></div>
               </div>
 
-              <div class="mb-4">
+              <!-- <div class="mb-4">
                 <label for="email" class="form-label mb-2">Endereço de E-mail</label>
                 <input type="email" class="form-control form-control-lg" id="email" placeholder="nome@exemplo.com"
                   required>
                 <div class="form-text text-muted">Nunca compartilharemos seu e-mail com ninguém.</div>
-              </div>
-
+              </div> -->
+<!--
               <div class="mb-4">
                 <label for="assunto" class="form-label mb-2">Herói Favorito</label>
                 <select class="form-select form-select-lg" id="assunto" required>
@@ -50,16 +50,16 @@
                   <option value="outros">Outros</option>
                 </select>
                 <div class="form-text text-muted">Selecione o tópico da sua mensagem.</div>
-              </div>
+              </div> -->
 
-              <div class="mb-4 form-check">
+              <!-- <div class="mb-4 form-check">
                 <input type="checkbox" class="form-check-input" id="termos" required>
                 <label class="form-check-label" for="termos">Eu concordo com os <a href="#"
                     class="text-primary text-decoration-none">Termos e Condições</a></label>
-              </div>
+              </div> -->
 
               <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary btn-lg custom-btn">Enviar Mensagem</button>
+                <button (click)="submitHero()" type="submit" class="btn btn-primary btn-lg custom-btn">Enviar Mensagem</button>
               </div>
             </form>
           </div>

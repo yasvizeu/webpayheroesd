@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './heroes.component.scss'
 })
 export class HeroesComponent {
-
 }
+
+

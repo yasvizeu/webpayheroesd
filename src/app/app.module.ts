@@ -1,3 +1,4 @@
+import { Hero } from './../hero/hero';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
@@ -12,7 +13,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VillainsModule } from './villains/villains.module';
 import { CreateHeroModule } from './create-hero/create-hero.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -34,6 +35,8 @@ import { CreateHeroModule } from './create-hero/create-hero.module';
     CreateHeroModule,
     VillainsModule,
     NgbModule,
+    ReactiveFormsModule,
+
 
 
 ],
