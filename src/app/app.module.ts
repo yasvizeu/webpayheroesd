@@ -17,10 +17,10 @@ import { CreateHeroModule } from './create-hero/create-hero.module';
 
 
 
+
 @NgModule({
   declarations: [
-    AppComponent,
-
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +31,9 @@ import { CreateHeroModule } from './create-hero/create-hero.module';
     CardsModule,
     CarouselModule,
     FooterModule,
+    CreateHeroModule,
     VillainsModule,
     NgbModule,
-    CreateHeroModule
 
 
 ],

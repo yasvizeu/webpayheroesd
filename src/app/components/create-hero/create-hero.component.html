@@ -11,14 +11,26 @@
             <form>
               <div class="mb-4">
                 <label for="nome" class="form-label mb-2">Nome</label>
-                <input type="text" class="form-control form-control-lg" id="nome" placeholder="Seu nome" required>
-                <div class="form-text text-muted">Clark Kent</div>
+                <input type="text" [(ngModel)]='name' class="form-control form-control-lg" id="nome" placeholder="Clark Kent" required>
+                <div class="form-text text-muted"></div>
               </div>
 
               <div class="mb-4">
-                <label for="nome" class="form-label mb-2">Poder</label>
-                <input type="text" class="form-control form-control-lg" id="nome" placeholder="Seu nome" required>
-                <div class="form-text text-muted">Voar</div>
+                <label for="power" class="form-label mb-2">Poder</label>
+                <input type="text" [(ngModel)]='power' class="form-control form-control-lg" id="power" placeholder="Voar" required>
+                <div class="form-text text-muted"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="gender" class="form-label mb-2">Gênero</label>
+                <input type="text" [(ngModel)]='gender' class="form-control form-control-lg" id="gender" placeholder="Sei lá" required>
+                <div class="form-text text-muted"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="age" class="form-label mb-2">Idade</label>
+                <input type="number" [(ngModel)]='age' class="form-control form-control-lg" id="age" placeholder="Voar" required>
+                <div class="form-text text-muted"></div>
               </div>
 
               <div class="mb-4">
@@ -29,22 +41,15 @@
               </div>
 
               <div class="mb-4">
-                <label for="assunto" class="form-label mb-2">Assunto</label>
+                <label for="assunto" class="form-label mb-2">Herói Favorito</label>
                 <select class="form-select form-select-lg" id="assunto" required>
                   <option selected disabled value="">Escolha...</option>
-                  <option value="duvida">Dúvida Geral</option>
-                  <option value="suporte">Suporte Técnico</option>
-                  <option value="sugestao">Sugestão</option>
+                  <option value="batman">Batman</option>
+                  <option value="homem_aranha">Homem Aranha</option>
+                  <option value="super_shock">Super Shock</option>
                   <option value="outros">Outros</option>
                 </select>
                 <div class="form-text text-muted">Selecione o tópico da sua mensagem.</div>
-              </div>
-
-              <div class="mb-4">
-                <label for="mensagem" class="form-label mb-2">Sua Mensagem</label>
-                <textarea class="form-control form-control-lg" id="mensagem" rows="6"
-                  placeholder="Digite sua mensagem aqui..." required></textarea>
-                <div class="form-text text-muted">Por favor, seja o mais detalhado possível.</div>
               </div>
 
               <div class="mb-4 form-check">

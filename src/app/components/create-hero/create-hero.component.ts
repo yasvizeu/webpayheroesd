@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './create-hero.component.scss'
 })
 export class CreateHeroComponent {
-
+  name: string = '';
+  age: number = 0;
+  power: string = '';
+  gender : string = '';
 }

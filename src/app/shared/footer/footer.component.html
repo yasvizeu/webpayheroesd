@@ -1,13 +1,51 @@
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+<footer class="footer mt-auto py-5 text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4 footer-heading">O Universo</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="/heroes" class="footer-link">Nossos Heróis</a></li>
+          <li><a routerLink="/villains" class="footer-link">Nossos Vilões</a></li>
+          <li><a routerLink="/powers" class="footer-link">Poderes & Habilidades</a></li>
+          <li><a routerLink="/battles" class="footer-link">Grandes Batalhas</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4 footer-heading">Informações</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="/about" class="footer-link">Sobre Nós</a></li>
+          <li><a routerLink="/contact" class="footer-link">Fale Conosco</a></li>
+          <li><a routerLink="/faq" class="footer-link">FAQ</a></li>
+          <li><a routerLink="/privacy" class="footer-link">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+        <h5 class="text-uppercase mb-4 footer-heading">Conecte-se</h5>
+        <p class="text-white-50">
+          Explore o épico conflito entre o bem e o mal. Mergulhe nas histórias de coragem, sacrifício e ambição.
+        </p>
+        <div class="d-flex social-icons mt-3">
+          <a href="https://facebook.com" target="_blank" class="footer-social-icon me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank" class="footer-social-icon me-3"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank" class="footer-social-icon me-3"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="text-white-50 mt-3 mb-0">
+          <i class="fas fa-envelope me-2">{{contato()}}</i>
+        </p>
+      </div>
+    </div>
+
+    <hr class="footer-divider my-4">
+
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0 text-white-50">&copy; {{ getCurrentYear() }} Universo Super. Todos os direitos reservados.
+          <span class="d-block d-md-inline">Criado para fãs de heróis e vilões.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -4,8 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-footer',
   standalone: false,
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  getCurrentYear(): number {
+    return new Date().getFullYear();
+  }
 
+  contato(): string{
+    return 'contato@universosuper.com'
+  }
 }
