@@ -19,4 +19,20 @@ export class HeroesService {
   ListHeroes(): Observable<any>{
     return this.httpClient.get(`${this.baseUrl}/heroes`, this.httpOptions);
   }
+
+  ListHeroById(id:any): Observable<any>{
+    return this.httpClient.get(`${this.baseUrl}/heroes/${id}`,this.httpOptions);
+  }
+
+  patchHero(id: any, hero:any): Observable<any>{
+    return this.httpClient.patch(`${this.baseUrl}/heroes/${id}`, this.httpOptions);
+  }
+
+  deteleHero(id:any): Observable<any>{
+    return this.httpClient.delete(`${this.baseUrl}/heroes/${id}`, this.httpOptions);
+  }
+
+  createHero(hero:any): Observable<any>{
+    return this.httpClient.post(`${this.baseUrl}/heroes`, hero, this.httpOptions);
+  }
 }
