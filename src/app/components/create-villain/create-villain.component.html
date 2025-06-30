@@ -1,0 +1,45 @@
+<form>
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="card shadow-lg border-0 rounded-lg form-card">
+          <div class="card-header bg-primary text-white text-center py-4 rounded-top-lg">
+            <h2 class="mb-0">Form</h2>
+            <p class="mb-0">Crie seu herói</p>
+          </div>
+          <div class="card-body p-5">
+            <form>
+              <div class="mb-4">
+                <label for="nome" class="form-label mb-2">Nome</label>
+                <input type="text" [(ngModel)]="name" name="name" class="form-control form-control-lg" id="nome" placeholder="Clark Kent" required>
+                <div class="form-text text-muted"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="power" class="form-label mb-2">Poder</label>
+                <input type="text" [(ngModel)]='power' name="power" class="form-control form-control-lg" id="power" placeholder="Voar" required>
+                <div class="form-text text-muted"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="gender" class="form-label mb-2">Gênero</label>
+                <input type="text" [(ngModel)]='gender' name= "gender"class="form-control form-control-lg" id="gender" placeholder="Sei lá" required>
+                <div class="form-text text-muted"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="age" class="form-label mb-2">Idade</label>
+                <input type="number" [(ngModel)]='age' name="age" class="form-control form-control-lg" id="age" placeholder="25" required>
+                <div class="form-text text-muted"></div>
+              </div>
+
+              <div class="d-grid gap-2">
+                <button (click)="submitVillain()" type="submit" class="btn btn-primary btn-lg custom-btn">Enviar Mensagem</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

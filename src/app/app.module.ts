@@ -14,6 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VillainsModule } from './villains/villains.module';
 import { CreateHeroModule } from './create-hero/create-hero.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreateVillainModule } from './components/create-villain/create-villain.module';
 
 
 
@@ -36,6 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     VillainsModule,
     NgbModule,
     ReactiveFormsModule,
+    CreateVillainModule
 
 
 
