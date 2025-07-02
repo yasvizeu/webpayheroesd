@@ -1,4 +1,3 @@
-import { Hero } from './../hero/hero';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
@@ -15,7 +14,8 @@ import { VillainsModule } from './villains/villains.module';
 import { CreateHeroModule } from './create-hero/create-hero.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateVillainModule } from './components/create-villain/create-villain.module';
-
+import { CommonModule } from '@angular/common';
+import {provideHttpClient} from '@angular/common/http'
 
 
 
@@ -37,13 +37,13 @@ import { CreateVillainModule } from './components/create-villain/create-villain.
     VillainsModule,
     NgbModule,
     ReactiveFormsModule,
-    CreateVillainModule
-
-
+    CreateVillainModule,
+    CommonModule,
 
 ],
   providers: [
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
