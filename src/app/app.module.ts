@@ -12,7 +12,7 @@ import { FooterModule } from './shared/footer/footer.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { VillainsModule } from './villains/villains.module';
 import { CreateHeroModule } from './create-hero/create-hero.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CreateVillainModule } from './components/create-villain/create-villain.module';
 import { CommonModule } from '@angular/common';
 import {provideHttpClient} from '@angular/common/http'
@@ -39,6 +39,7 @@ import {provideHttpClient} from '@angular/common/http'
     ReactiveFormsModule,
     CreateVillainModule,
     CommonModule,
+    FormsModule,
 
 ],
   providers: [

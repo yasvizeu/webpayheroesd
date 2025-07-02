@@ -1,70 +1,90 @@
-<form>
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-10 col-sm-12">
-        <div class="card shadow-lg border-0 rounded-lg form-card">
-          <div class="card-header bg-primary text-white text-center py-4 rounded-top-lg">
-            <h2 class="mb-0">Form</h2>
-            <p class="mb-0">Crie seu herói</p>
-          </div>
-          <div class="card-body p-5">
-            <form>
+<div class="container">
+  <form [formGroup]="heroForm" (ngSubmit)="onSubmit()"> <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+          <div class="card shadow-lg border-0 rounded-lg form-card">
+            <div class="card-header bg-primary text-white text-center py-4 rounded-top-lg">
+              <h2 class="mb-0">Form</h2>
+              <p class="mb-0">Crie seu herói</p>
+            </div>
+            <div class="card-body p-5">
               <div class="mb-4">
                 <label for="nome" class="form-label mb-2">Nome</label>
-                <input type="text" [(ngModel)]="name" name="name" class="form-control form-control-lg" id="nome" placeholder="Clark Kent" required>
+                <input type="text" formControlName="name" name="name" class="form-control form-control-lg" id="nome"
+                  placeholder="Clark Kent" required>
                 <div class="form-text text-muted"></div>
+                <div *ngIf="controle('name')?.invalid && controle('name')?.touched"> <small *ngIf="controle('name')?.errors?.['required']"> O nome é obrigatório
+                  </small>
+                  <small *ngIf="controle('name')?.errors?.['minlength'] && controle('name')?.touched">
+                    Nome deve ter no mínimo 3 caracteres.
+                  </small>
+                  <small *ngIf="controle('name')?.errors?.['maxlength'] && controle('name')?.touched">
+                    Nome deve ter no máximo 50 caracteres.
+                  </small>
+                </div>
               </div>
 
               <div class="mb-4">
                 <label for="power" class="form-label mb-2">Poder</label>
-                <input type="text" [(ngModel)]='power' name="power" class="form-control form-control-lg" id="power" placeholder="Voar" required>
+                <input type="text" formControlName='power' name="power" class="form-control form-control-lg" id="power"
+                  placeholder="Voar" required>
                 <div class="form-text text-muted"></div>
+                <div *ngIf="controle('power')?.invalid && controle('power')?.touched">
+                  <small *ngIf="controle('power')?.errors?.['required']">
+                    O poder é obrigatório
+                  </small>
+                  <small *ngIf="controle('power')?.errors?.['minlength'] && controle('power')?.touched">
+                    Poder deve ter no mínimo 3 caracteres.
+                  </small>
+                  <small *ngIf="controle('power')?.errors?.['maxlength'] && controle('power')?.touched">
+                    Poder deve ter no máximo 50 caracteres.
+                  </small>
+                </div>
               </div>
 
               <div class="mb-4">
                 <label for="gender" class="form-label mb-2">Gênero</label>
-                <input type="text" [(ngModel)]='gender' name= "gender"class="form-control form-control-lg" id="gender" placeholder="Sei lá" required>
+                <input type="text" formControlName='gender' name="gender" class="form-control form-control-lg" id="gender"
+                  placeholder="Sei lá" required>
                 <div class="form-text text-muted"></div>
+                <div *ngIf="controle('gender')?.invalid && controle('gender')?.touched">
+                  <small *ngIf="controle('gender')?.errors?.['required']">
+                    O gênero é obrigatório
+                  </small>
+                  <small *ngIf="controle('gender')?.errors?.['minlength'] && controle('gender')?.touched">
+                    Gênero deve ter no mínimo 3 caracteres.
+                  </small>
+                  <small *ngIf="controle('gender')?.errors?.['maxlength'] && controle('gender')?.touched">
+                    Gênero deve ter no máximo 15 caracteres.
+                  </small>
+                </div>
               </div>
 
               <div class="mb-4">
                 <label for="age" class="form-label mb-2">Idade</label>
-                <input type="number" [(ngModel)]='age' name="age" class="form-control form-control-lg" id="age" placeholder="25" required>
+                <input type="number" formControlName='age' name="age" class="form-control form-control-lg" id="age"
+                  placeholder="25" required>
                 <div class="form-text text-muted"></div>
+                <div *ngIf="controle('age')?.invalid && controle('age')?.touched">
+                  <small *ngIf="controle('age')?.errors?.['required']">
+                    A idade é obrigatória
+                  </small>
+                  <small *ngIf="controle('age')?.errors?.['min'] && controle('age')?.touched">
+                    Idade mínima é 1.
+                  </small>
+                  <small *ngIf="controle('age')?.errors?.['max'] && controle('age')?.touched">
+                    Idade máxima é 150.
+                  </small>
+                </div>
               </div>
-
-              <!-- <div class="mb-4">
-                <label for="email" class="form-label mb-2">Endereço de E-mail</label>
-                <input type="email" class="form-control form-control-lg" id="email" placeholder="nome@exemplo.com"
-                  required>
-                <div class="form-text text-muted">Nunca compartilharemos seu e-mail com ninguém.</div>
-              </div> -->
-<!--
-              <div class="mb-4">
-                <label for="assunto" class="form-label mb-2">Herói Favorito</label>
-                <select class="form-select form-select-lg" id="assunto" required>
-                  <option selected disabled value="">Escolha...</option>
-                  <option value="batman">Batman</option>
-                  <option value="homem_aranha">Homem Aranha</option>
-                  <option value="super_shock">Super Shock</option>
-                  <option value="outros">Outros</option>
-                </select>
-                <div class="form-text text-muted">Selecione o tópico da sua mensagem.</div>
-              </div> -->
-
-              <!-- <div class="mb-4 form-check">
-                <input type="checkbox" class="form-check-input" id="termos" required>
-                <label class="form-check-label" for="termos">Eu concordo com os <a href="#"
-                    class="text-primary text-decoration-none">Termos e Condições</a></label>
-              </div> -->
 
               <div class="d-grid gap-2">
-                <button (click)="submitHero()" type="submit" class="btn btn-primary btn-lg custom-btn">Enviar Mensagem</button>
+                <button type="submit" class="btn btn-primary btn-lg custom-btn">Cadastrar</button>
               </div>
-            </form>
-          </div>
+            </div>
+            </div>
         </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
