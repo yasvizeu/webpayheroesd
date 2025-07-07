@@ -1,0 +1,36 @@
+.container {
+  max-width: 900px;
+
+  table {
+    border-radius: 8px;
+    overflow: hidden;
+
+    th {
+      font-weight: 600;
+    }
+
+    td {
+      vertical-align: middle;
+    }
+
+    .btn {
+      font-size: 0.85rem;
+      border-radius: 6px;
+      padding: 4px 12px;
+    }
+  }
+
+  .footer-nav {
+    a {
+      margin: 0 8px;
+      font-size: 0.875rem;
+      text-decoration: none;
+      color: #6c757d;
+
+      &:hover {
+        color: #0d6efd;
+        text-decoration: underline;
+      }
+    }
+  }
+}

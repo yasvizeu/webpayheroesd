@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <h4 class="text-center mb-4">Listagem de Heróis</h4>
+
+  <table class="table table-bordered text-center align-middle shadow">
+    <thead class="table-light">
+      <tr>
+        <th>Nome</th>
+        <th>Poder</th>
+        <th>Idade</th>
+        <th>Gênero</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Itera sobre a lista de heróis -->
+      <ng-container *ngFor="let hero of heroes">
+        <!-- Condição: Se o ID do herói atual for igual ao ID do herói em edição,
+             mostra a linha do formulário de edição (modo de edição).
+             Caso contrário, mostra a linha no modo de visualização padrão. -->
+        <tr *ngIf="editHero?.id === hero.id; else viewModeRow">
+          <!-- Linha para Edição - Campos de Input -->
+          <td>
+            <!-- Usando [formControl] e os getters do TS para robustez -->
+            <input type="text" class="form-control" [formControl]="nameControl">
+            <div *ngIf="nameControl.invalid && (nameControl.dirty || nameControl.touched)" class="text-danger mt-1">
+              <div *ngIf="nameControl.errors?.['required']">Nome é obrigatório.</div>
+              <div *ngIf="nameControl.errors?.['minlength']">Nome deve ter no mínimo 2 caracteres.</div>
+              <div *ngIf="nameControl.errors?.['maxlength']">Nome deve ter no máximo 50 caracteres.</div>
+            </div>
+          </td>
+          <td>
+            <input type="text" class="form-control" [formControl]="powerControl">
+            <div *ngIf="powerControl.invalid && (powerControl.dirty || powerControl.touched)" class="text-danger mt-1">
+              <div *ngIf="powerControl.errors?.['required']">Poder é obrigatório.</div>
+              <div *ngIf="powerControl.errors?.['minlength']">Poder deve ter no mínimo 3 caracteres.</div>
+              <div *ngIf="powerControl.errors?.['maxlength']">Poder deve ter no máximo 50 caracteres.</div>
+            </div>
+          </td>
+          <td>
+            <input type="number" class="form-control" [formControl]="ageControl">
+            <div *ngIf="ageControl.invalid && (ageControl.dirty || ageControl.touched)" class="text-danger mt-1">
+              <div *ngIf="ageControl.errors?.['required']">Idade é obrigatória.</div>
+              <div *ngIf="ageControl.errors?.['minlength']">Idade deve ter no mínimo 1 dígito.</div>
+              <div *ngIf="ageControl.errors?.['maxlength']">Idade deve ter no máximo 3 dígitos.</div>
+            </div>
+          </td>
+          <td>
+            <input type="text" class="form-control" [formControl]="genderControl">
+            <div *ngIf="genderControl.invalid && (genderControl.dirty || genderControl.touched)" class="text-danger mt-1">
+              <div *ngIf="genderControl.errors?.['required']">Gênero é obrigatório.</div>
+              <div *ngIf="genderControl.errors?.['minlength']">Gênero deve ter no mínimo 3 caracteres.</div>
+              <div *ngIf="genderControl.errors?.['maxlength']">Gênero deve ter no máximo 50 caracteres.</div>
+            </div>
+          </td>
+          <td>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <button class="btn btn-primary btn-sm" (click)="onUpdate(hero.id)">Atualizar</button>
+              <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">Cancelar</button>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Template para o modo de visualização padrão -->
+        <ng-template #viewModeRow>
+          <tr>
+            <td>{{ hero.name }}</td>
+            <td>{{ hero.power }}</td>
+            <td>{{ hero.age }}</td>
+            <td>{{ hero.gender }}</td>
+            <td>
+              <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <button class="btn btn-primary btn-sm" (click)="startEdit(hero)">Editar</button>
+                <button class="btn btn-danger btn-sm" (click)="deleteHero(hero.id)">Excluir</button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

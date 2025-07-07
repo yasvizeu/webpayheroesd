@@ -16,6 +16,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CreateVillainModule } from './components/create-villain/create-villain.module';
 import { CommonModule } from '@angular/common';
 import {provideHttpClient} from '@angular/common/http'
+import { ListHeroesModule } from './components/list-heroes/list-heroes.module';
+
 
 
 
@@ -40,6 +42,7 @@ import {provideHttpClient} from '@angular/common/http'
     CreateVillainModule,
     CommonModule,
     FormsModule,
+    ListHeroesModule
 
 ],
   providers: [
